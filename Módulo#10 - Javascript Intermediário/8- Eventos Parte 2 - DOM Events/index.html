@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function onOver(elemento){
+
+            elemento.style.backgroundColor = "red";
+
+        }
+
+        function onOut(elemento){
+            elemento.style.backgroundColor = "darkgoldenrod"
+        }
+       
+    </script>
+
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 20px;
+            background-color: darkgoldenrod;
+            color: aliceblue;
+        }
+    </style>
+
+</head>
+<body onload="console.log('Página completamente carregada!')">
+
+   <img src="https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png">
+   <br>
+   <div onmouseover="onOver(this)" onmouseout="onOut(this)">Click</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function loaded(){
+
+            let t = document.getElementById("titulo");
+
+            // t.onclick = mudarText; 
+
+            t.addEventListener("mouseover", mudarText);
+            t.addEventListener("mouseout", mouseOut)
+        
+        }
+
+        function mudarText(){
+            this.innerHTML = "Novo Texto";
+        }
+
+        function mouseOut(){
+            this.innerHTML = "Mouse fora do elemento";
+        }
+
+    </script>
+
+    <style>
+        
+    </style>
+
+</head>
+<body onload="loaded()">
+
+   <h1 id="titulo">teste</h1>
+
+</body>
+</html>

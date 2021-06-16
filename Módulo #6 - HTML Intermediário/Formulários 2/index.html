@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulário HTML - Intermediário - GET e POST</title>
+</head>
+<body>
+
+	<!-- NO MÉTODO GET OS DADOS APARECEM NO LINK DA PÁGINA,
+		PORTANTO PARA FORMULÁRIOS DE LOGIN ISSO NÃO É SEGURO
+
+		NESTE "VERBO" DO PROTOCOLO HTTP, OS PARÂMETROS SÃO PASSADOS NO CABEÇALHO DA REQUISIÇÃO.
+
+		ESSE "VERBO" É O PADRÃO UTILIZADO NO ENVIO DE FORMULÁRIOS HTTP, PORÉM NA QUESTÃO DE SEGURANÇA DE CADASTROS E LOGIN NÃO É O MAIS INDICADO.
+
+		NO CASO DE LOGIN O MAIS INDICADO É O "VERBO" POST, PELO FATO DOS DADOS SEREM ENVIADOS NO CORPO DO FORMULÁRIO E NÃO NO CABEÇALHO DA REQUISIÇÃO. PARA UM MÉTODO MAIS SEGURO DOS DADOS MAIS PARÂMETROS DO BACKEND DEVEM SER PASSADOS.-->
+
+	<form method="GET" action="/cadastro">
+		
+		<input type="text" name="email">
+		<input type="text" name="nome">
+		<input type="submit">
+
+	</form><br><br><br><br>
+
+
+	<form method="POST" action="/cadastro">
+		
+		<input type="text" name="email">
+		<input type="text" name="nome">
+		<input type="submit">
+
+	</form><br><br><br><br>
+
+
+	<!--ABAIXO FOI UTILIZADO O GET DEVIDO AO SITE DO YOUTUBE NA PARTE DO BACKEND EM SUA CONSTRUÇÃO ESTAR ESPERANDO UM GET-->
+
+	<form method="GET" action="http://www.youtube.com/results">
+
+		<input type="text" name="search_query" placeholder="Pesquisar no Youtube">
+		<input type="submit">
+
+	</form><br><br><br><br>
+
+
+	<!--TIPOS DE INPUT-->
+
+	<form method="POST" action="">
+
+		<input type="password" name="senha" placeholder="Digite a senha">
+
+		<input type="checkbox" name="curso" value="react-native">React Native<br>
+
+		<input type="checkbox" name="curso" value="react-js">React JS<br>
+
+		<input type="radio" name="gender" value="m" checked>Masculino<br>
+		<input type="radio" name="gender" value="f">Feminino<br>
+
+		<input type="reset" value="Limpar">	
+
+		<input type="submit" value="Enviar">
+		
+	</form><br><br><br><br>
+
+
+	<!--SELECT-->
+
+	<form method="GET" action="">
+
+		<select name="estado">
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="SP" selected>São Paulo</option>
+			<option value="GO">Goiás</option>
+			<option value="ES">Espírito Santo</option>
+		</select>
+		
+	</form><br><br><br><br>
+
+
+	<!--TEXTAREA-->
+
+	<form method="GET" action="">
+		
+		<input type="text" name="assunto"><br>
+
+		<textarea name="mensagem"></textarea>
+
+		<input type="submit">
+
+	</form><br><br><br><br>
+
+
+	<!--FORMULÁRIO HTML5-->
+	<!--É necessário ver se diversos browsers dão suporte para essas novas funcionalidades-->
+
+	<form method="GET" action="">
+		
+		<input type="color" name="cor">
+		<br>
+		<input type="date" name="data" max="2021-12-31">
+		<br>
+		<input type="datetime-local" name="data" max="2021-12-31">
+		<br>
+
+		<!--no input file o method precisa ser POST para ser enviado-->
+		<input type="file" name="arquivo">
+		<br>
+		<input type="number" name="numeros" min="5" max="10">
+		<br>
+		<input type="range" name="intervalo" min="5" max="10" value="6">
+		<br>
+
+		<!-- input tel funciona mais para mobile selecionando apenas o teclado numérico-->
+		<input type="tel" name="telefone">
+		<br>
+		<input type="email" name="email">
+		<br>
+		<input type="submit">
+
+	</form>
+
+
+</body>
+</html>
